@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +28,7 @@ SECRET_KEY = 'django-insecure-9hd+--irquy179!rv686a2)omdv*6@&(__ipe3pxx4=f0ke1v4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -88,7 +90,7 @@ DATABASES = {
 '''
 
 
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -99,7 +101,10 @@ DATABASES = {
         'HOST': os.environ.get('HOST') 
     }
 }
-
+'''
+DATABASES = {
+    'default': dj_database_url.parse(config('DATABASE_URL')),
+}
 
 
 
@@ -157,7 +162,7 @@ STATICFILES_DIRS = [
 
 #vercel settings
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/images/'
 
