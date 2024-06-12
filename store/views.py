@@ -10,6 +10,9 @@ from .models import *
 def main(request):
     return render(request, 'store/main.html')
 
+def index(request):
+    return render(request, 'store/index.html')
+
 
 def store(request):
     if request.user.is_authenticated:
