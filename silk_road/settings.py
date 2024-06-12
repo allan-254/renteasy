@@ -205,7 +205,7 @@ AWS_DEFAULT_ACL = None
 
 
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
-DEFAULT_FILE_STORAGE = 'silk_road.storage_backends.MediaStorage'
+#DEFAULT_FILE_STORAGE = 'silk_road.storage_backends.MediaStorage'
 #DEFAULT_FILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
