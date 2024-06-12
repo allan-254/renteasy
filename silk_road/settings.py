@@ -167,7 +167,7 @@ STATICFILES_DIRS = [
 
 #vercel settings
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/images/'
 
